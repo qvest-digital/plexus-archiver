@@ -1305,12 +1305,12 @@ public abstract class AbstractArchiver
         return lastModifiedDate;
     }
 
-    boolean getFollowSymlinks()
+    public boolean getFollowSymlinks()
     {
         return followSymlinks;
     }
 
-    void setFollowSymlinks( boolean follow )
+    public void setFollowSymlinks( boolean follow )
     {
         followSymlinks = follow;
     }

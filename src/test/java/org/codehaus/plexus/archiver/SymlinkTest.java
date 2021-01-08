@@ -96,13 +96,13 @@ public class SymlinkTest
         if ( !Os.isFamily( Os.FAMILY_WINDOWS ) )
         {
             DirectoryArchiver archiver = (DirectoryArchiver) lookup( Archiver.ROLE, "dir" );
+            archiver.setFollowSymlinks( false );
 
             File dummyContent = getTestFile( "src/test/resources/symlinks/src" );
             archiver.addDirectory( dummyContent );
             final File archiveFile = new File( "target/output/dirarchiver-symlink" );
             archiveFile.mkdirs();
             archiver.setDestFile( archiveFile );
-            archiver.setFollowSymlinks( false );
             archiver.createArchive();
 
             File symbolicLink = new File( "target/output/dirarchiver-symlink/symR" );

@@ -483,6 +483,10 @@ public interface Archiver
     boolean getFollowSymlinks();
 
     /**
+     * Configure the archiver to follow symbolic links when encountering
+     * them during directory traversal (must be configured <em>before</em>
+     * any {@link #addFileSet(FileSet)} or old addDirectory() calls).
+     *
      * @since 4.3.1
      */
     void setFollowSymlinks( boolean follow );

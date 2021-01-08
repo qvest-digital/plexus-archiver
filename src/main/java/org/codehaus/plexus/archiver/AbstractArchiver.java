@@ -136,6 +136,11 @@ public abstract class AbstractArchiver
      */
     private String overrideGroupName;
 
+    /**
+     * @since 4.3.1
+     */
+    private boolean followSymlinks = true;
+
     // contextualized.
     private ArchiverManager archiverManager;
 
@@ -367,8 +372,8 @@ public abstract class AbstractArchiver
         // The PlexusIoFileResourceCollection contains platform-specific File.separatorChar which
         // is an interesting cause of grief, see PLXCOMP-192
         final PlexusIoFileResourceCollection collection = new PlexusIoFileResourceCollection();
-        collection.setFollowingSymLinks( true );
-        getLogger().info( "setFollowingSymLinks done" );
+        collection.setFollowingSymLinks( followSymlinks );
+        getLogger().info( "following (archiver): " + followSymlinks );
 
         collection.setIncludes( fileSet.getIncludes() );
         collection.setExcludes( fileSet.getExcludes() );
@@ -1298,5 +1303,15 @@ public abstract class AbstractArchiver
     protected Date normalizeLastModifiedDate( Date lastModifiedDate )
     {
         return lastModifiedDate;
+    }
+
+    boolean getFollowSymlinks()
+    {
+        return followSymlinks;
+    }
+
+    void setFollowSymlinks( boolean follow )
+    {
+        followSymlinks = follow;
     }
 }

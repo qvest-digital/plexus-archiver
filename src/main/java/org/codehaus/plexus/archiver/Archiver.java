@@ -476,4 +476,14 @@ public interface Archiver
      * @since 4.2.0
      */
     void configureReproducible( Date lastModifiedDate );
+
+    /**
+     * @since 4.3.1
+     */
+    boolean getFollowSymlinks();
+
+    /**
+     * @since 4.3.1
+     */
+    void setFollowSymlinks( boolean follow );
 }

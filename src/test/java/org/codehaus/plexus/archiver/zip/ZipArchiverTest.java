@@ -126,17 +126,16 @@ public class ZipArchiverTest
             archiver.setDefaultDirectoryMode( 0777 );
             archiver.setDirectoryMode( 0641 );
             archiver.setFileMode( 0777 );
+            archiver.setFollowSymlinks( false );
             archiver.addDirectory( new File( "src/test/resources/symlinks/src" ) );
             archiver.createArchive();
 
             assertTrue( zipFile.exists() );
             ZipFile zf = new ZipFile( zipFile );
             ZipArchiveEntry fizz = zf.getEntry( "symDir" );
-/*
             assertTrue( fizz.isUnixSymlink() );
             ZipArchiveEntry symR = zf.getEntry( "symR" );
             assertTrue( symR.isUnixSymlink() );
-*/
         }
     }
 

@@ -9,7 +9,7 @@
     <version>5.1</version>
   </parent>
 
-  <groupId>org.evolvis.tartools</groupId>
+  <groupId>org.evolvis.tartools.forked</groupId>
   <artifactId>plexus-archiver</artifactId>
   <version>4.2.1</version>
   <name>Plexus Archiver Component</name>

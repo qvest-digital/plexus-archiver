@@ -367,7 +367,7 @@ public abstract class AbstractArchiver
         // The PlexusIoFileResourceCollection contains platform-specific File.separatorChar which
         // is an interesting cause of grief, see PLXCOMP-192
         final PlexusIoFileResourceCollection collection = new PlexusIoFileResourceCollection();
-        collection.setFollowingSymLinks( false );
+        collection.setFollowingSymLinks( true );
 
         collection.setIncludes( fileSet.getIncludes() );
         collection.setExcludes( fileSet.getExcludes() );

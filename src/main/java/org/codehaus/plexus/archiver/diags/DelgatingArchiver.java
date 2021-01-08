@@ -405,4 +405,15 @@ public class DelgatingArchiver implements Archiver
         target.configureReproducible( lastModifiedDate );
     }
 
+    @Override
+    public boolean getFollowSymlinks()
+    {
+        return target.getFollowSymlinks();
+    }
+
+    @Override
+    public void setFollowSymlinks( boolean follow )
+    {
+        target.setFollowSymlinks( follow );
+    }
 }

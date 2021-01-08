@@ -473,4 +473,15 @@ public class TrackingArchiver
     public void configureReproducible( Date lastModifiedDate )
     {
     }
+
+    @Override
+    public boolean getFollowSymlinks()
+    {
+        return false;
+    }
+
+    @Override
+    public void setFollowSymlinks( boolean follow )
+    {
+    }
 }

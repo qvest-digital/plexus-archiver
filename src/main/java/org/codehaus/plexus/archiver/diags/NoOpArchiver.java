@@ -420,4 +420,14 @@ public class NoOpArchiver implements Archiver
 
     }
 
+    @Override
+    public boolean getFollowSymlinks()
+    {
+        return false;
+    }
+
+    @Override
+    public void setFollowSymlinks( boolean follow )
+    {
+    }
 }

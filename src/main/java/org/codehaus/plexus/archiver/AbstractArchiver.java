@@ -1305,11 +1305,13 @@ public abstract class AbstractArchiver
         return lastModifiedDate;
     }
 
+    @Override
     public boolean getFollowSymlinks()
     {
         return followSymlinks;
     }
 
+    @Override
     public void setFollowSymlinks( boolean follow )
     {
         followSymlinks = follow;

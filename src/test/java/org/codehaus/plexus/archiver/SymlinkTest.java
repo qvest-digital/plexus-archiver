@@ -93,6 +93,7 @@ public class SymlinkTest
     public void testSymlinkDirArchiver()
         throws Exception
     {
+/*
         if ( !Os.isFamily( Os.FAMILY_WINDOWS ) )
         {
             DirectoryArchiver archiver = (DirectoryArchiver) lookup( Archiver.ROLE, "dir" );
@@ -110,6 +111,7 @@ public class SymlinkTest
             symbolicLink = new File( "target/output/dirarchiver-symlink/aDirWithALink/backOutsideToFileX" );
             assertTrue( Files.isSymbolicLink( symbolicLink.toPath() ) );
         }
+*/
     }
 
 }

@@ -373,7 +373,6 @@ public abstract class AbstractArchiver
         // is an interesting cause of grief, see PLXCOMP-192
         final PlexusIoFileResourceCollection collection = new PlexusIoFileResourceCollection();
         collection.setFollowingSymLinks( followSymlinks );
-        getLogger().info( "following (archiver): " + followSymlinks );
 
         collection.setIncludes( fileSet.getIncludes() );
         collection.setExcludes( fileSet.getExcludes() );

@@ -598,9 +598,15 @@ public class ZipArchiverTest
         {
             final File zipFile = getTestFile( "target/output/pasymlinks-fileset.zip" );
             final ZipArchiver zipArchiver = getZipArchiver( zipFile );
-            final DefaultFileSet fs = new DefaultFileSet();
+            DefaultFileSet fs = new DefaultFileSet();
             fs.setPrefix( "bzz/" );
             fs.setDirectory( new File( "src/test/resources/symlinks/src" ) );
+            zipArchiver.setFollowSymlinks( false );
+            zipArchiver.addFileSet( fs );
+            fs = new DefaultFileSet();
+            fs.setPrefix( "bzzt/" );
+            fs.setDirectory( new File( "src/test/resources/symlinks/src" ) );
+            zipArchiver.setFollowSymlinks( true );
             zipArchiver.addFileSet( fs );
             zipArchiver.createArchive();
             final File output = getTestFile( "target/output/unzipped/symlFs" );
@@ -610,9 +616,16 @@ public class ZipArchiverTest
             zipUnArchiver.extract();
             File symDir = new File( output, "bzz/symDir" );
             PlexusIoResourceAttributes fa = FileAttributes.uncached( symDir );
-/*
             assertTrue( fa.isSymbolicLink() );
-*/
+            symDir = new File( output, "bzzt/symDir" );
+            fa = FileAttributes.uncached( symDir );
+            assertFalse( fa.isSymbolicLink() );
+            symDir = new File( output, "bzz/symR" );
+            fa = FileAttributes.uncached( symDir );
+            assertTrue( fa.isSymbolicLink() );
+            symDir = new File( output, "bzzt/symR" );
+            fa = FileAttributes.uncached( symDir );
+            assertFalse( fa.isSymbolicLink() );
         }
     }
 

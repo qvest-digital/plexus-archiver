@@ -10,15 +10,15 @@
   </parent>
 
   <groupId>org.evolvis.tartools.forked</groupId>
-  <artifactId>plexus-archiver</artifactId>
-  <version>4.2.1</version>
+  <artifactId>plexus-archiver-4.2.1</artifactId>
+  <version>2</version>
   <name>Plexus Archiver Component</name>
 
   <scm>
     <connection>scm:git:git@github.com:tarent/plexus-archiver.git</connection>
     <developerConnection>scm:git:git@github.com:tarent/plexus-archiver.git</developerConnection>
     <url>http://github.com/tarent/plexus-archiver/tree/${project.scm.tag}/</url>
-    <tag>plexus-archiver-4.2.1-follow-symlinks</tag>
+    <tag>plexus-archiver-4.2.1-follow-symlinks-r2</tag>
   </scm>
   <issueManagement>
     <system>jira</system>

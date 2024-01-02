@@ -15,9 +15,9 @@
   <name>Plexus Archiver Component</name>
 
   <scm>
-    <connection>scm:git:git@github.com:tarent/plexus-archiver.git</connection>
-    <developerConnection>scm:git:git@github.com:tarent/plexus-archiver.git</developerConnection>
-    <url>http://github.com/tarent/plexus-archiver/tree/${project.scm.tag}/</url>
+    <connection>scm:git:git@github.com:qvest-digital/plexus-archiver.git</connection>
+    <developerConnection>scm:git:git@github.com:qvest-digital/plexus-archiver.git</developerConnection>
+    <url>https://github.com/qvest-digital/plexus-archiver/tree/${project.scm.tag}/</url>
     <tag>plexus-archiver-4.2.1-follow-symlinks-r2</tag>
   </scm>
   <issueManagement>
